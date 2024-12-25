@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/* Tổng thể body */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    background-image: url('https://www.google.com.vn/url?sa=i&url=https%3A%2F%2Ftinhdoan.laichau.gov.vn%2Fgioi-thieu%2Fdoan-tncs-ho-chi-minh%2Fco-huy-hieu-doan-ca&psig=AOvVaw2TanzBAkYTBfFJP32B8x6i&ust=1735021614858000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNj3pKqhvYoDFQAAAAAdAAAAABAE'); /* Đường dẫn ảnh nền */
+    background-size: cover; /* Bao phủ toàn bộ màn hình */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-attachment: fixed; /* Ảnh cố định khi cuộn */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    color: #28a745;
+    margin-left: 10px;
+}
+
+/* Card thiết kế */
+.card {
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card i {
+    font-size: 50px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+}
+
+.card:hover i {
+    transform: rotate(10deg) scale(1.2);
+    color: #fff;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.col-md-4 {
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+/* Hiệu ứng màu hover */
+.card.bg-danger:hover { background-color: #dc3545; }
+.card.bg-success:hover { background-color: #28a745; }
+.card.bg-warning:hover { background-color: #ffc107; }
+.card.bg-primary:hover { background-color: #007bff; }
+.card.bg-info:hover { background-color: #17a2b8; }
+.card.bg-secondary:hover { background-color: #6c757d; }
+
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.sidebar a:hover {
+    background: #ffc107;
+    color: #28a745;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+/* Tooltip hiệu ứng */
+.card-body i {
+    position: relative;
+}
+
+.card-body i:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    animation: tooltipFadeIn 0.3s forwards;
+}
+
+@keyframes tooltipFadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 80px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer p {
+    color: #333;
+}
+
+/* Buttons */
+.btn-lg {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button-row .col-md-4 {
+    margin-bottom: 20px;
+}
+
+.action-buttons .btn {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.collapse-btn {
+    cursor: pointer;
+color: #007bff;
+    font-size: 14px;
+}
+
+.details-row {
+    display: none;
+}
